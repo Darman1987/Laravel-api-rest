@@ -19,3 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('country','App\Http\Controllers\Country\CountryController@country');
+Route::get('country/{id}','App\Http\Controllers\Country\CountryController@countryByID');
+Route::post('country','App\Http\Controllers\Country\CountryController@countrySave');
+Route::put('country/{country}','App\Http\Controllers\Country\CountryController@countryUpdate');
+Route::delete('country/{country}','App\Http\Controllers\Country\CountryController@countryDelete');
